@@ -22,4 +22,3 @@ class CharacterSprite(pygame.sprite.Sprite):
         if self.moveTo:
             self.rect.center = self.moveTo
             self.moveTo = None
-            

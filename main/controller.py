@@ -35,3 +35,19 @@ class KeyboardController:
 
 class CPUSpinnerController:
     """CPUPSpinnerController - controls CPU ticks"""
+    def __init__(self, evManager):
+        self.evManager = evManager
+        self.evManager.RegisterListener(self)
+        self.keepGoing = 1
+
+    def Run(self):
+        """Run - keep ticking"""
+        while self.keepGoing:
+            event = TickEvent()
+            self.evManager.Post(event)
+
+    def Notify(self, event):
+        """Notify - kill program"""
+        if isinstance(event,QuitEvent):
+            #This will kill the loop
+            self.keepGoing = 0
