@@ -1,4 +1,6 @@
 #model container module
+from events import TickEvent
+
 class Game:
     """Game Class - model that looks after the Game"""
     STATE_PREPARING = 0

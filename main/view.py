@@ -1,5 +1,6 @@
 #view
 import pygame
+from events import TickEvent
 
 class PygameView:
     """Pygame view class"""
@@ -75,4 +76,3 @@ class PygameView:
             self.ShowCharacter(event.character)
         elif isinstance(event, CharacterMoveEvent):
             self.MoveCharacter(event.character)
-            

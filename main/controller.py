@@ -1,6 +1,7 @@
 #Controller
 import pygame
-import events
+from events import TickEvent
+from events import QuitEvent
 
 class KeyboardController:
     """KeyboardController - controls keyboard functions """
@@ -17,16 +18,16 @@ class KeyboardController:
                     ev = QuitEvent()
                 elif event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                     ev = QuitEvent()
-                elif event.type == KEYDOWN and event.key = K_UP:
+                elif event.type == KEYDOWN and event.key == K_UP:
                     direction = DIRECTION_UP
                     ev = CharacterMoveRequest(direction)
-                elif event.type == KEYDOWN and event.key = K_DOWN:
+                elif event.type == KEYDOWN and event.key == K_DOWN:
                     direction = DIRECTION_DOWN
                     ev = CharacterMoveRequest(direction)
-                elif event.type == KEYDOWN and event.key = K_LEFT:
+                elif event.type == KEYDOWN and event.key == K_LEFT:
                     direction = DIRECTION_LEFT
                     ev = CharacterMoveRequest(direction)
-                elif event.type == KEYDOWN and event.key = K_RIGHT:
+                elif event.type == KEYDOWN and event.key == K_RIGHT:
                     direction = DIRECTION_RIGHT
                     ev = CharacterMoveRequest(direction)
 
