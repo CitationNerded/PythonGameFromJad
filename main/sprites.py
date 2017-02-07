@@ -6,6 +6,7 @@ class SectorSprite(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self,group)
         self.image = pygame.Surface((132,132))
         self.image.fill((0,255,128))
+        self.rect = self.image.get_rect()
         self.sector = sector
 
 class CharacterSprite(pygame.sprite.Sprite):
