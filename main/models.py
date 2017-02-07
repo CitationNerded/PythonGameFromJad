@@ -1,5 +1,5 @@
 #model container module
-from events import TickEvent
+from events import *
 
 class Game:
     """Game Class - model that looks after the Game"""
@@ -105,7 +105,7 @@ class Map:
         ev = MapBuiltEvent(self)
         self.evMananger.Post(ev)
 
-    class Sector:
+class Sector:
         """Sector Management Class"""
         def __init__(self,evMananger):
             self.evMananger = evMananger

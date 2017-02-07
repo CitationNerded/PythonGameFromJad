@@ -1,6 +1,7 @@
 #view
 import pygame
-from events import TickEvent
+from events import *
+from sprites import *
 
 class PygameView:
     """Pygame view class"""
