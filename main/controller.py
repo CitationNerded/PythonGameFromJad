@@ -1,7 +1,11 @@
-#Controller
+"""controller.py - used to hold controller classes"""
+#Controller module - used to hold and maintain controller classes
+
+
 import pygame
 from events import TickEvent
 from events import QuitEvent
+
 
 class KeyboardController:
     """KeyboardController - controls keyboard functions """
