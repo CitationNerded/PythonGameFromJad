@@ -40,10 +40,11 @@ class Character:
         self.evMananger = evMananger
         self.evMananger.RegisterListener(self)
         self.sector = None
+        print("Sector: %s"%(self.sector))
 
     def Move(self, direction):
         if self.sector.MovePossible(direction):
-            newSector = self.sector.neighbours[direction]
+            newSector = self.sector.neighbors[direction]
             self.sector = newSector
             ev = CharacterMoveEvent(self)
             self.evMananger.Post(ev)

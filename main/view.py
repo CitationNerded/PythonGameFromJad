@@ -13,7 +13,7 @@ class PygameView:
         self.window = pygame.display.set_mode((428,428))
         pygame.display.set_caption("Example Game")
         self.background = pygame.Surface(self.window.get_size())
-        self.background.fill((0, 0, 0))
+        self.background.fill((100, 0, 0))
 
         self.backSprites = pygame.sprite.RenderUpdates()
         self.frontSprites = pygame.sprite.RenderUpdates()
@@ -33,14 +33,14 @@ class PygameView:
             newSprite.rect = squareRect
             newSprite = None
 
-    def ShowCharacter(self,character):
+    def ShowCharacter(self, character):
         characterSprite = CharacterSprite(self.frontSprites)
 
         sector = character.sector
         sectorSprite = self.GetSectorSprite(sector)
-        characterSprite.rect.centre = sectorSprite.rect.center
+        characterSprite.rect.center = sectorSprite.rect.center
 
-    def MoveCharacter(self,character):
+    def MoveCharacter(self, character):
         characterSprite = self.GetCharacterSprite(character)
         sector = character.sector
 

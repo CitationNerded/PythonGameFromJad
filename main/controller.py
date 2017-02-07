@@ -3,6 +3,12 @@
 import pygame
 from events import TickEvent
 from events import QuitEvent
+from events import DIRECTION_UP
+from events import DIRECTION_DOWN
+from events import DIRECTION_LEFT
+from events import DIRECTION_RIGHT
+from events import CharacterMoveRequest
+
 
 
 class KeyboardController:
