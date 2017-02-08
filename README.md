@@ -1,10 +1,10 @@
 # Python-game-example README
 
-This is a base project written by Jad Pamment
+This is a crappy base project implemented and refactored by Jad Pamment
 
 ### What is it?
 
-This is basic *game* built using the [pygame](http://pygame.org/lofi.html) library as part of the python library.
+This is basic *game* built using the [pygame](http://pygame.org/lofi.html) library as part of the python library. The examples at [pygame](http://pygame.org/lofi.html) contains the outline for this project.
 
 Is relies on a basic [mvc*ish*](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) structure to display and manipulate objects in a window. At this point it's pretty barebones - has lots of tweaks that can be made and lots of tests to be added.
 
