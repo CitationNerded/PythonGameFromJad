@@ -35,7 +35,6 @@ class PygameView:
 
     def ShowCharacter(self, character):
         characterSprite = CharacterSprite(self.frontSprites)
-
         sector = character.sector
         sectorSprite = self.GetSectorSprite(sector)
         characterSprite.rect.center = sectorSprite.rect.center
@@ -43,7 +42,6 @@ class PygameView:
     def MoveCharacter(self, character):
         characterSprite = self.GetCharacterSprite(character)
         sector = character.sector
-
         sectorSprite = self.GetSectorSprite(sector)
         characterSprite.moveTo = sectorSprite.rect.center
 
