@@ -63,5 +63,4 @@ class CPUSpinnerController:
     def Notify(self, event):
         """Notify - kill program."""
         if isinstance(event, QuitEvent):
-            #This will kill the loop
             self.keepGoing = 0

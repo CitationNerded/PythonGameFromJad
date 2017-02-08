@@ -66,7 +66,6 @@ class Map:
     """Manages Map Class"""
     def __init__(self,evMananger):
         self.evMananger = evMananger
-        #self.evMananger.RegisterListener(self)
 
         self.sectors = list(range(9))
         self.startSectorIndex = 0
@@ -107,7 +106,7 @@ class Map:
         self.evMananger.Post(ev)
 
 class Sector:
-        """Sector Management Class"""
+        """Sector Management Class."""
         def __init__(self,evMananger):
             self.evMananger = evMananger
             #self.evMananger.RegisterListener(self)

@@ -1,17 +1,14 @@
-#Base Application File used for running entire Application
-#Designed to run in the same fashion as Spring Framework in Java
+"""baseApp module - all classes are initialised here."""
 
-import pygame
-from configparser import ConfigParser
 from events import EventManager
 from controller import KeyboardController
 from controller import CPUSpinnerController
 from view import PygameView
 from models import Game
 
-def main():
-    """main - main function calls all components and runs
-       the program """
+
+def Main():
+    """main - main function calls all components and run the program."""
     print("Base Application Running")
     evManager = EventManager()
     keybd = KeyboardController(evManager)
@@ -20,7 +17,7 @@ def main():
     game = Game(evManager)
 
     spinner.Run()
-    return 0
+
 
 if __name__ == '__main__':
-    main()
+    Main()

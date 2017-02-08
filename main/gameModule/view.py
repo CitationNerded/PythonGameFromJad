@@ -1,16 +1,17 @@
-#view
+"""This module supports the view classes."""
 import pygame
 from events import *
 from sprites import *
 
+
 class PygameView:
-    """Pygame view class"""
+    """Pygame view class."""
     def __init__(self, evManager):
         self.evManager = evManager
         self.evManager.RegisterListener(self)
 
         pygame.init()
-        self.window = pygame.display.set_mode((428,428))
+        self.window = pygame.display.set_mode((428, 428))
         pygame.display.set_caption("Example Game")
         self.background = pygame.Surface(self.window.get_size())
         self.background.fill((100, 0, 0))
@@ -42,14 +43,15 @@ class PygameView:
     def MoveCharacter(self, character):
         characterSprite = self.GetCharacterSprite(character)
         sector = character.sector
+        print("SECTOR: %s" %(sector) )
         sectorSprite = self.GetSectorSprite(sector)
         characterSprite.moveTo = sectorSprite.rect.center
 
-    def GetCharacterSprite(self,character):
+    def GetCharacterSprite(self, character):
         for s in self.frontSprites.sprites():
             return s
 
-    def GetSectorSprite(self,sector):
+    def GetSectorSprite(self, sector):
         for s in self.backSprites.sprites():
             if hasattr(s, 'sector') and s.sector == sector:
                 return s
