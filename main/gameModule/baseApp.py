@@ -4,8 +4,7 @@ from events import EventManager
 from controller import KeyboardController
 from controller import CPUSpinnerController
 from view import PygameView
-from models import Game
-
+from events import Game
 
 def Main():
     """main - main function calls all components and run the program."""

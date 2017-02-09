@@ -153,7 +153,7 @@ class Character:
     def Move(self, direction):
         """Move the character object."""
         if self.sector.MovePossible(direction):
-            newSector = self.sector.neighbours[direction]
+            newSector = self.sector.neighbors[direction]
             self.sector = newSector
             ev = CharacterMoveEvent(self)
             self.evMananger.Post(ev)
