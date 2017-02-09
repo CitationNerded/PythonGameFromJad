@@ -18,6 +18,7 @@ Just run ```baseApp.py``` and the in-built methods should do the rest.
 * Basic mvc structure
 * Basic hardwired window
 * Basic directional keyboard controls
+* Documentation can be found under /docs
 
 ### TODO
 
