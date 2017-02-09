@@ -6,7 +6,9 @@ from sprites import *
 
 class PygameView:
     """Pygame view class."""
+
     def __init__(self, evManager):
+        """Pygame view Initialise."""
         self.evManager = evManager
         self.evManager.RegisterListener(self)
 
@@ -20,6 +22,7 @@ class PygameView:
         self.frontSprites = pygame.sprite.RenderUpdates()
 
     def ShowMap(self, map):
+        """Show Map details as a series of rectangle sprites."""
         squareRect = pygame.Rect((-128, 10, 128, 128))
 
         i = 0
@@ -35,28 +38,33 @@ class PygameView:
             newSprite = None
 
     def ShowCharacter(self, character):
+        """Draw Character Sprite on top of a sector sprite."""
         characterSprite = CharacterSprite(self.frontSprites)
         sector = character.sector
         sectorSprite = self.GetSectorSprite(sector)
         characterSprite.rect.center = sectorSprite.rect.center
 
     def MoveCharacter(self, character):
+        """Move Character - redraw character sprite after movement."""
         characterSprite = self.GetCharacterSprite(character)
         sector = character.sector
-        print("SECTOR: %s" %(sector) )
+        print("SECTOR: %s" % (sector))
         sectorSprite = self.GetSectorSprite(sector)
         characterSprite.moveTo = sectorSprite.rect.center
 
     def GetCharacterSprite(self, character):
+        """Retrieve Character Sprite for a defined character."""
         for s in self.frontSprites.sprites():
             return s
 
     def GetSectorSprite(self, sector):
+        """Retrieve Sector Sprite for defined sector."""
         for s in self.backSprites.sprites():
             if hasattr(s, 'sector') and s.sector == sector:
                 return s
 
     def Notify(self, event):
+        """Event Notifier for class."""
         if isinstance(event, TickEvent):
             self.backSprites.clear(self.window, self.background)
             self.frontSprites.clear(self.window, self.background)
