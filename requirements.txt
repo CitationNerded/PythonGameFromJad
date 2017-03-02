@@ -1,4 +1,6 @@
 appdirs==1.4.2
 packaging==16.8
+pygame==1.9.3
+pygradle==0.1.dev0
 pyparsing==2.1.10
 six==1.10.0
