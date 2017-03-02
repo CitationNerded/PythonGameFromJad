@@ -13,12 +13,19 @@ The ```main()``` method sits inside ```baseApp.py``` and is used to run the enti
 
 Just run ```baseApp.py``` and the in-built methods should do the rest.
 
+### How to run tests...
+Fucked if I know?
+I'll build some unit tests and add them into the gradle task list. 
+
 ### Current State
 
 * Basic mvc structure
 * Basic hardwired window
 * Basic directional keyboard controls
 * Documentation can be found under /docs
+* Now with virtualenv integration - (because it makes shit easy)
+* Fuckin {py}gradle and shit. Why is this here? Because I'd rather shit in my
+hand and clap than use maven. Also because virtualenv is too difficult apparently.
 
 ### TODO
 
