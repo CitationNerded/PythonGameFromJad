@@ -15,7 +15,7 @@ Just run ```baseApp.py``` and the in-built methods should do the rest.
 
 ### How to run tests...
 Fucked if I know?
-I'll build some unit tests and add them into the gradle task list. 
+I'll build some unit tests and add them into the gradle task list.
 
 ### Current State
 
@@ -31,3 +31,5 @@ hand and clap than use maven. Also because virtualenv is too difficult apparentl
 
 * Add a unit test suite using [pyTest](http://doc.pytest.org/en/latest/)
 * Implement CI test build
+* I'll setup an artefactory. The linkedin one only has a small number of the artefacts that
+I need.
